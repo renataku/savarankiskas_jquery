@@ -1,3 +1,9 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Playfair Display";
   src: url(fonts/PlayfairDisplay-Regular.ttf) format("truetype");
@@ -9,12 +15,30 @@
   font-weight: 700;
 }
 
-h1 {
-  font-family: "Playfair Display";
-  font-weight: 700;
+.flex {
+  display: flex;
 }
-
-h2 {
-  font-family: "Playfair Display";
-  font-weight: bold;
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.direction-column {
+  flex-direction: column;
 }
