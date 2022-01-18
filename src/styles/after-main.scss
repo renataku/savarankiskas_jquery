@@ -1,0 +1,16 @@
+@import "variables.scss";
+.after-main {
+  div {
+    min-height: 100px;
+
+    &:nth-child(1) {
+      background: $main-bg-color;
+    }
+  }
+
+  p {
+    font-family: WorkSans;
+    font-weight: 500px;
+    text-transform: uppercase;
+  }
+}

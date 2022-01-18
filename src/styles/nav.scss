@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+nav {
+  background: $main-bg-color;
+  min-height: 100px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    overflow: hidden;
+    transform: scale(0);
+
+    li {
+      padding: 0 10px;
+      text-transform: uppercase;
+      font-family: WorkSans;
+      font-size: 14px;
+    }
+  }
+
+  .active {
+    transform: scale(1);
+  }
+  .container {
+    @extend %container;
+
+    .wrapper {
+      width: 16px;
+      height: 16px;
+      position: relative;
+
+      div {
+        width: 6px;
+        height: 6px;
+        background: #252525;
+        position: absolute;
+
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+
+        &:nth-child(2) {
+          top: 0;
+          right: 0;
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+          left: 0;
+        }
+
+        &:nth-child(4) {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

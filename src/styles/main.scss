@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+main {
+  background: $main-bg-color;
+  min-height: 100px;
+  .container {
+    @extend %container;
+    flex-wrap: wrap;
+
+    .wrapper {
+      position: relative;
+      background: $text-color;
+
+      &:hover .title {
+        z-index: 4;
+        transition: all 0.5s ease-out;
+      }
+
+      &:hover img {
+        opacity: 0.3;
+        transition: all 0.5s ease-out;
+      }
+    }
+
+    div {
+      width: 390px;
+      height: 390px;
+      // overflow: hidden;
+    }
+
+    img {
+      width: 390px;
+      height: 390px;
+      object-fit: cover;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-family: "Playfair Display";
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 24px;
+      margin: 0 0 24px 0;
+    }
+
+    h2 {
+      font-family: WorkSans;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
